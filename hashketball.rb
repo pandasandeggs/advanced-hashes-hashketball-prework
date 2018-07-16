@@ -29,6 +29,5 @@ end
 
 def num_points_scored(name)
   players.find {|player| player.fetch(:points) == num}
-  end
 end 
 
