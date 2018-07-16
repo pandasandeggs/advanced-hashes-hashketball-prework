@@ -29,6 +29,7 @@ end
 
 def num_points_scored(name)
   game_hash.each do |team,players|
+    team
   end
 end 
 
