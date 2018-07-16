@@ -71,19 +71,7 @@ def teams
   game_hash.values
 end
 
-def find_the_team(team_name)
-  teams.find {|team| team.fetch(:team_name) == team_name}
-end
 
-def player_biggest_shoe_size
-  players.sort_by {|player| player.fetch(:shoe) }.last
-end
-
-def players
-  home_players = game_hash.fetch(:home).fetch(:players)
-  away_players = game_hash.fetch(:away).fetch(:players)
-  home_players + away_players
-end
 
 
 
