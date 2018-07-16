@@ -58,6 +58,10 @@ def player_numbers(team_name)
   end
 end
 
+def player_stats(player_name)
+  find_the_player(player_name).reject { |key, value| key == :player_name }
+end
+
 def teams
   game_hash.values
 end
@@ -81,8 +85,5 @@ def players
   home_players + away_players
 end
 
-def player_stats(player_name)
-  find_the_player(player_name).reject { |key, value| key == :player_name }
-end
 
 
