@@ -27,7 +27,5 @@ def game_hash
   }
 end
 
-def num_points_scored(name)
-  players.find {|player| player.fetch(:points) == num}
-end 
+players.find {|player| player.fetch(:player_name) == name} 
 
