@@ -52,6 +52,12 @@ def team_names
   end
 end
 
+def player_numbers(team_name)
+  find_the_team(team_name)[:players].map do |player|
+    player[:number]
+  end
+end
+
 def teams
   game_hash.values
 end
@@ -73,13 +79,6 @@ def players
   home_players = game_hash.fetch(:home).fetch(:players)
   away_players = game_hash.fetch(:away).fetch(:players)
   home_players + away_players
-end
-
-
-def player_numbers(team_name)
-  find_the_team(team_name)[:players].map do |player|
-    player[:number]
-  end
 end
 
 def player_stats(player_name)
