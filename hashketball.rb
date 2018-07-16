@@ -46,6 +46,12 @@ def team_colors(team_name)
   team.fetch(:colors)
 end
 
+def team_names
+  teams.map do |team|
+    team[:team_name]
+  end
+end
+
 def teams
   game_hash.values
 end
@@ -69,11 +75,6 @@ def players
   home_players + away_players
 end
 
-def team_names
-  teams.map do |team|
-    team[:team_name]
-  end
-end
 
 def player_numbers(team_name)
   find_the_team(team_name)[:players].map do |player|
