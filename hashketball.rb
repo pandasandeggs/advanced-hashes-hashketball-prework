@@ -28,8 +28,7 @@ def game_hash
 end
 
 def num_points_scored(name)
-  game_hash.each do |team,players|
-    team
+  players.find {|player| player.fetch(:points) == num}
   end
 end 
 
